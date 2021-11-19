@@ -34,13 +34,13 @@ suppressPackageStartupMessages(library("EnhancedVolcano"))
 ```{r read_inputs, include=FALSE}
 debug=0
 if (debug==1){
-  rawcountsmatrix="/Volumes/Wolin/mESC_slam_analysis/find_mutation_101521/rsem/rsem.raw_counts_matrix.tsv"
-  coldata="/Volumes/Wolin/mESC_slam_analysis/find_mutation_101521/rsem/rsem.raw_counts_matrix.tsv.colData" 
+  rawcountsmatrix="/Users/kopardevn/Documents/Projects/rbl4/find_mutations_101521/DEGs/KO_vs_WT.0021.counts.tsv"
+  coldata="/Users/kopardevn/Documents/Projects/rbl4/find_mutations_101521/DEGs/KO_vs_WT.0021.coldata.tsv" 
   condition1="KO"
   condition2="WT"
   indexcols=unlist(strsplit("gene_id,gene_name",",")) # comma separated list of indexing columns eg. gene_id,gene_name
   cpm_cutoff=1
-  degoutdir="/Volumes/Wolin/mESC_slam_analysis/find_mutation_101521/rsem/"
+  degoutdir="/Users/kopardevn/Documents/Projects/rbl4/find_mutations_101521/DEGs"
 } else {
   rawcountsmatrix=params$rawcountsmatrix
   coldata=params$coldata
